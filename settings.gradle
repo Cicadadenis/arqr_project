@@ -1,0 +1,2 @@
+rootProject.name = 'arqr_project'
+include ':app'
