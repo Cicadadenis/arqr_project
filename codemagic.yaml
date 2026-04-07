@@ -5,15 +5,9 @@ workflows:
     environment:
       vars:
         GRADLE_OPTS: "-Xmx2048m"
-      android:
-        image: default
     scripts:
       - name: Build APK
         script: |
           ./gradlew clean assembleDebug
     artifacts:
-      - build/app/outputs/apk/debug/*.apk
-    publishing:
-      email:
-        recipients:
-          - your_email@example.com
+      - app/build/outputs/apk/debug/*.apk
